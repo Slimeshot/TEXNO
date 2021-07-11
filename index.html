@@ -23,7 +23,7 @@
 		<div class="container">
 			<div class="header__content">
 				<a href="#" class="header__logo">
-					<img src="../images/dist/Logo.png" alt="logo">
+					<img src="images/dist/Logo.png" alt="logo">
 				</a>
 				<nav class="navigation header__navigation">
 					<ul class="navigation__menu">
@@ -54,7 +54,7 @@
 
 <body>
 
-<section class="intro">
+<section class="intro" id="introLink">
 	<div class="container">
 		<div class="intro__container">
 			<div class="intro__text">
@@ -103,18 +103,18 @@
 
 <section class="sailing">
 	<div class="container">
-		<div class="sailing__content">
+		<div class="sailing__content" id="navigation">
 			<div class="sailing__block">
-				<a href="#" class="sailing__btn-link"></a>
+				<a href="#introLink" class="sailing__btn-link"></a>
 				<span class="sailing__title">Решение для флота</span>
 			</div>
 			<ul class="sailing__menu">
-				<li class="sailing__list"><a href="#" class="sailing__link">Кейсы</a></li>
-				<li class="sailing__list"><a href="#" class="sailing__link">Системы для флота</a></li>
-				<li class="sailing__list"><a href="#" class="sailing__link">Кому подходит</a></li>
+				<li class="sailing__list"><a href="#projectLink" class="sailing__link">Кейсы</a></li>
+				<li class="sailing__list"><a href="#systemLink" class="sailing__link">Системы для флота</a></li>
+				<li class="sailing__list"><a href="#helpLink" class="sailing__link">Кому подходит</a></li>
 				<li class="sailing__list"><a href="#" class="sailing__link">Метрики измерений</a></li>
-				<li class="sailing__list"><a href="#" class="sailing__link">Интерфейс</a></li>
-				<li class="sailing__list"><a href="#" class="sailing__link">Готовые решения</a></li>
+				<li class="sailing__list"><a href="#interfaceLink" class="sailing__link">Интерфейс</a></li>
+				<li class="sailing__list"><a href="#solutionsLink" class="sailing__link">Готовые решения</a></li>
 			</ul>
 			<button class="btn sailing__btn-call">Заказать звонок</button>
 			<div class="header__btn-menu">
@@ -130,7 +130,7 @@
 
 
 
-<section class="project">
+<section class="project" id="projectLink">
 	<div class="container">
 		<div class="project__content">
 			<div class="project__block">
@@ -309,7 +309,7 @@
 	</div>
 </section>
 
-<section class="system">
+<section class="system" id="systemLink">
 	<div class="container">
 		<div class="system__content">
 			<div class="system__text">
@@ -409,7 +409,85 @@
 	</div>
 </section>
 
-<section class="help">
+<section class="calculator">
+    <div class="container">
+        <div class="calculator__wrapper">
+            <div class="row">
+                <div class="col-lg-3 col-xl-4">
+                    <div class="calculator__left">
+                        <div class="calculator__title title">Рассчитайте<br>свою экономию</div>
+                        <div class="calculator__subtitle">
+                            <p class="color-accent mb-md">3-6 месяца</p>
+                            <p class="color-base500">Средний срок окупаемости</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-xl-8">
+                    <form action="#" class="calculator__form form" method="POST">
+                        <div class="calculator__form-visible">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form__select mb-md">
+                                        <select name="ship_type" id="">
+                                            <option value="1">Вид судна</option>
+                                            <option value="2">Буксирное судно</option>
+                                            <option value="3">Промышленое судно</option>
+                                            <option value="4">Грузовое Судно</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form__number mb-md">
+                                        <label for="formCount">Количество единиц</label>
+                                        <div class="form__number-wrapper">
+                                            <span data-number-control data-action="min" class="icon minus"></span>
+                                            <input type="number" name="count" id="formCount" value="1" min="1" required>
+                                            <span data-number-control data-action="plus" class="icon plus"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="text" class="mb-md" name="month_delivery"
+                                        placeholder="Расстояние в месяц" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="text" class="mb-md" name="price" placeholder="Стоимость за тонну"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="calculator__form-footer">
+                                        <div class="divider mt-md mb-xl"></div>
+                                        <button class="form__btn-primary mr-xl calculator_btn_next" role="button">Рассчитать</button>
+                                        <span class="mutted fs-md">
+                                            Оставляя заявку вы соглашаетесь на <a href="#" target="_blank">обработку
+                                                данных</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator__form-hidden">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5>Спасибо за расчет!</h5>
+                                    <p class="mb-md mutted">Введите свой адрес электронной почты и мы вышлем на нее
+                                        результаты расчета!</p>
+                                    <input type="email" name="email" placeholder="example@example.ru" required>
+                                    <button class="form__btn-primary mt-md" role="submit">Отправить мне расчет</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="help" id="helpLink">
 	<div class="container">
 		<div class="help__content">
 			<div class="help__left">
@@ -513,7 +591,7 @@
 	</div>
 </section>
 
-<section class="interface">
+<section class="interface" id="interfaceLink">
 	<div class="container">
 		<div class="interface__content">
 			<div class="interface__left">
@@ -533,14 +611,16 @@
 	<div class="container">
 		<div class="proposal__content">
 			<div class="proposal__left">
-				<span class="proposal__title title">Оставьте заявку на online<br> демонстрацию системы</span>
+				<span class="proposal__title title">Оставьте заявку на Online <br> демонстрацию системы</span>
 				<span class="proposal__subtitle">Оставляя заявку вы <br>
 					соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 			</div>
 			<div class="proposal__right">
 				<form class="proposal__form form">
-					<input class="form__name" name="name" type="text" placeholder="Имя"> 
-					<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
+					<div class="form__block">
+						<input class="form__name" name="name" type="text" placeholder="Имя"> 
+						<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
+					</div>
 					<input type="submit" value="Оставить заявку" class="form__btn-primary">
 				</form>
 				<div class="proposal__row">
@@ -613,374 +693,253 @@
 </section>
 
 
-<section class="solutions">
-	<div class="container">
-		<div class="solutions__content">
-			<div class="solutions__left">
-				<span class="solutions__title title">Готовые решения<br>
-					для флота</span>
-			</div>
-			<div class="solutions__right">
-				<div class="solutions__sheep">
-					<div class="solutions__subtitle">Буксир-толкач Тип ОТ-2400</div>
-					<div class="solutions__section">
-						<div class="solutions__params">Комплектации</div>
-						<div class="solutions__info">
-							<button class="solutions__button-1 solutions__button" id="defaultClick-1">1</button>
-							<button class="solutions__button-1 solutions__button">2</button>
-							<button class="solutions__button-1 solutions__button">3</button>
-						</div>
-					</div>
-					<div class="solution__block-1 solution__block">
-						<div class="solutions__section">
-							<div class="solutions__params">Описание</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">Бортовой контроллер</div>	
-										<div class="solitions__description">запись, хранение, передача данных в ПО</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Уровня топлива танков запаса</div>	
-										<div class="solitions__description">контроль уровня и приема-выдачи толпива</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Реле Работы</div>	
-										<div class="solitions__description">контроль времени работы дизель-генераторов, котла котла по нормативу</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Оборотов</div>	
-										<div class="solitions__description">контроль режимов работы главных двигателей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомеры топлива</div>	
-										<div class="solitions__description">контроль потребления топлива всех потребителей</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params">Характеристики</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">ГД</div>	
-										<div class="solitions__description">расходомер Sekee FM20 - 4 шт + Д. Оборотов - 2 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">ДГ</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 3 шт + Реле работы - 3 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Котел</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 1 шт + Реле работы - 1 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Танки запаса топлива</div>	
-										<div class="solitions__description">Д.Уровня топлива + Монитор - 6 + 6 шт</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params"></div>
-							<div class="solutions__info">
-								<a href="#" class="btn solutions__btn">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-					<div class="solution__block-1 solution__block">
-						<div class="solutions__section">
-							<div class="solutions__params">Описание</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">Бортовой контроллер</div>	
-										<div class="solitions__description">запись, хранение, передача данных в ПО</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Реле Работы</div>	
-										<div class="solitions__description">контроль времени работы дизель-генераторов, котла котла по нормативу</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Оборотов</div>	
-										<div class="solitions__description">контроль режимов работы главных двигателей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомеры топлива</div>	
-										<div class="solitions__description">контроль потребления топлива всех потребителей</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params">Характеристики</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">ГД</div>	
-										<div class="solitions__description">расходомер Sekee FM20 - 4 шт + Д. Оборотов - 2 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">ДГ</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 3 шт + Реле работы - 3 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Котел</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 1 шт + Реле работы - 1 шт</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params"></div>
-							<div class="solutions__info">
-								<a href="#" class="btn solutions__btn">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-					<div class="solution__block-1 solution__block">
-						<div class="solutions__section">
-							<div class="solutions__params">Описание</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">Бортовой контроллер</div>	
-										<div class="solitions__description">запись, хранение, передача данных в ПО</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Реле Работы</div>	
-										<div class="solitions__description">контроль времени работы дизель-генераторов, котла контроль потребления топпива Дизель-генераторов, котла по нормативу + контроль времени работы</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Оборотов</div>	
-										<div class="solitions__description">контроль режимов работы главных двигателей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомеры топлива</div>	
-										<div class="solitions__description">контроль потребления топлива всех потребителей</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params">Характеристики</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">ГД</div>	
-										<div class="solitions__description">расходомер Sekee FM20 - 4 шт + Д. Оборотов - 2 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">ДГ</div>	
-										<div class="solitions__description">Реле работы - 3 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Котел</div>	
-										<div class="solitions__description">Реле работы - 1 шт</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params"></div>
-							<div class="solutions__info">
-								<a href="#" class="btn solutions__btn">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				<div class="solutions__sheep">
-					<div class="solutions__subtitle">Промысловое судно<br> Проект 1440</div>
-					<div class="solutions__section">
-						<div class="solutions__params">Комплектации</div>
-						<div class="solutions__info">
-							<button class="solutions__button-2 solutions__button" id="defaultClick-2">1</button>
-							<button class="solutions__button-2 solutions__button">2</button>
-							<button class="solutions__button-2 solutions__button">3</button>
-						</div>
-					</div>
-					<div class="solution__block-2 solution__block">
-						<div class="solutions__section">
-							<div class="solutions__params">Описание</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">Система сбора данных VMTS</div>	
-										<div class="solitions__description">запись, хранение, передача данных в ПО</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Панель оператора</div>	
-										<div class="solitions__description">Панель (Планшет) отображает информацию с установленного оборудования на судне</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Подключение к спутниковому интернету SAT</div>	
-										<div class="solitions__description">возможность пердачи данных системы в не зоны покрытия GSM сети.</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомеры топлива</div>	
-										<div class="solitions__description">контроль потребления топлива всех потребителей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Оборотов</div>	
-										<div class="solitions__description">контроль режимов работы Главных двигателей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Трансформаторы тока + Сч. ЭЭ</div>	
-										<div class="solitions__description">контроль нагрузки дизель-генератора, выработка ЭЭ.</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Реле Работы</div>	
-										<div class="solitions__description">контроль времени работы Дизель-генераторов, котла</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомер приема-выдачи топлива ДТ / ТТ</div>	
-										<div class="solitions__description">Контроль принимаемого и выдаваемого топлива (согласовывается)</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Свето звуковая сигнализация контроля приема топлива</div>	
-										<div class="solitions__description">Контроль примеа топлива (оповещение при не качественных бункеровках)</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params">Характеристики</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">ГД</div>	
-										<div class="solitions__description">расходомер Массомер Ду15 - 2 шт + Д. Оборотов - 1 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">ДГ1,2</div>	
-										<div class="solitions__description">расходомер Массомер Ду15 - 2 шт + Трансформатор тока 6 шт + Сч. ЭЭ 2 шт + Реле работы - 2 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Котел</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 1 шт + Реле работы - 1 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомер приема выдачи топлива Ду80</div>	
-										<div class="solitions__description">1 шт</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params"></div>
-							<div class="solutions__info">
-								<a href="#" class="btn solutions__btn">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-					<div class="solution__block-2 solution__block">
-						<div class="solutions__section">
-							<div class="solutions__params">Описание</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">Бортовой контроллер</div>	
-										<div class="solitions__description">запись, хранение, передача данных в ПО</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Реле Работы</div>	
-										<div class="solitions__description">контроль времени работы дизель-генераторов, котла котла по нормативу</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Оборотов</div>	
-										<div class="solitions__description">контроль режимов работы главных двигателей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомеры топлива</div>	
-										<div class="solitions__description">контроль потребления топлива всех потребителей</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params">Характеристики</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">ГД</div>	
-										<div class="solitions__description">расходомер Sekee FM20 - 4 шт + Д. Оборотов - 2 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">ДГ</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 3 шт + Реле работы - 3 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Котел</div>	
-										<div class="solitions__description">расходомер Sekee FM10 - 1 шт + Реле работы - 1 шт</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params"></div>
-							<div class="solutions__info">
-								<a href="#" class="btn solutions__btn">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-					<div class="solution__block-2 solution__block">
-						<div class="solutions__section">
-							<div class="solutions__params">Описание</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">Бортовой контроллер</div>	
-										<div class="solitions__description">запись, хранение, передача данных в ПО</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Реле Работы</div>	
-										<div class="solitions__description">контроль времени работы дизель-генераторов, котла контроль потребления топпива Дизель-генераторов, котла по нормативу + контроль времени работы</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Д.Оборотов</div>	
-										<div class="solitions__description">контроль режимов работы главных двигателей</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Расходомеры топлива</div>	
-										<div class="solitions__description">контроль потребления топлива всех потребителей</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params">Характеристики</div>
-							<div class="solutions__info">
-								<ul class="solutions__menu">
-									<li class="solutions__list">
-										<div class="solitions__denotation">ГД</div>	
-										<div class="solitions__description">расходомер Sekee FM20 - 4 шт + Д. Оборотов - 2 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">ДГ</div>	
-										<div class="solitions__description">Реле работы - 3 шт</div>	
-									</li>
-									<li class="solutions__list">
-										<div class="solitions__denotation">Котел</div>	
-										<div class="solitions__description">Реле работы - 1 шт</div>	
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="solutions__section">
-							<div class="solutions__params"></div>
-							<div class="solutions__info">
-								<a href="#" class="btn solutions__btn">Оставить заявку</a>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-				
-			</div>
-		</div>
-	</div>
+<section class="solutions" id="solutionsLink">
+    <div class="container">
+        <article class="solutions__item">
+            <header class="solutions__item-header">
+                <div class="row">
+                    <div class="col-12 col-xl-4">
+                        <p class="fs-md mb-md">Готовые решения для</p>
+                        <h4 class="title">Буксира-толкача<br>Тип ОТ-2400</h4>
+                    </div>
+                </div>
+            </header>
+            <section class="solutions__item-content">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5 col-xxl-4">
+                        <h5 class="title fs-sm">Комплектация</h5>
+                        <ul class="nav nav-tabs tab" role="tablist">
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link active" id="econom-1-tab" data-bs-toggle="tab"
+                                    data-bs-target="#econom-1" type="button" role="tab">Эконом</button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="comfort-tab" data-bs-toggle="tab"
+                                    data-bs-target="#comfort-1" type="button" role="tab">Комфорт</button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="premium-tab" data-bs-toggle="tab"
+                                    data-bs-target="#premium-1" type="button" role="tab">Премиум</button>
+                            </li>
+                        </ul>
+                        <div class="divider"></div>
+                        <ul class="nav nav-tabs tab tab-links" role="tablist">
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link title active" id="whatInclude-tab" data-bs-toggle="tab"
+                                    data-bs-target="#whatInclude" type="button" role="tab">Что входит</button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link title" id="shipDescription-tab" data-bs-toggle="tab"
+                                    data-bs-target="#shipDescription" type="button" role="tab">Описание</button>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="whatInclude" role="tabpanel"
+                                aria-labelledby="whatInclude-tab">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="econom-1" role="tabpanel"
+                                        aria-labelledby="econom-tab">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="block">
+                                                    <p>Бортовой контроллер <span class="mutted">х1</span></p>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="block__title">ГД</div>
+                                                    <p>Sekee FM20 <span class="mutted">х4</span></p>
+                                                    <p>Датчик оборотов <span class="mutted">х4</span></p>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="block__title">ДГ</div>
+                                                    <p>Sekee FM20 <span class="mutted">х3</span></p>
+                                                    <p>Реле работы <span class="mutted">х3</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="block">
+                                                    <div class="block__title">Котел</div>
+                                                    <p>Sekee FM20 <span class="mutted">х1</span></p>
+                                                    <p>Реле работы <span class="mutted">х1</span></p>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="block__title">Танки запаса топлива</div>
+                                                    <p>Датчик уровня топлива <span class="mutted">х1</span></p>
+                                                    <p>Монитор <span class="mutted">х1</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="comfort-1" role="tabpanel"
+                                        aria-labelledby="comfort-tab">
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="premium-1" role="tabpanel"
+                                        aria-labelledby="premium-tab">
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="shipDescription" role="tabpanel"
+                                aria-labelledby="shipDescription-tab">
+                                <h2>Lorem, ipsum.</h2>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    At laboriosam eveniet mollitia animi totam nam laudantium
+                                    nobis ullam tempora dolor.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nihil voluptatem iste vel doloribus quaerat nulla.
+                                    Ducimus et dolorum a nulla! Ut impedit error magnam quis,
+                                    recusandae tempora quae earum vitae beatae et eligendi
+                                    consectetur incidunt culpa ullam quaerat praesentium dolorum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider last"></div>
+                        <form action="#" class="form">
+                            <input type="hidden" name="title" value="Буксира-толкача Тип ОТ-2400">
+                            <input type="hidden" name="type" value="Эконом">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <input type="tel" name="phone" placeholder="Телефон" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <button class="form__btn-primary">Оставить заявку</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="order-first order-lg-last col-lg-6 col-xl-7 col-xxl-8">
+                        <img src="images/src/solutions/ship-1.png" alt="Буксира-толкача Тип ОТ-2400"
+                            class="solutions__img">
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="solutions__item">
+            <header class="solutions__item-header">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <p class="fs-md mb-md">Готовые решения для</p>
+                        <h4 class="title">Промыслового судна<br>Проект 1440</h4>
+                    </div>
+                </div>
+            </header>
+            <section class="solutions__item-content">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-5 col-xxl-4">
+                        <h5 class="title fs-sm">Комплектация</h5>
+                        <ul class="nav nav-tabs tab" role="tablist">
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link active" id="econom-2-tab" data-bs-toggle="tab"
+                                    data-bs-target="#econom-2" type="button" role="tab">Эконом</button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="comfort-tab" data-bs-toggle="tab"
+                                    data-bs-target="#comfort-2" type="button" role="tab">Комфорт</button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link" id="premium-tab" data-bs-toggle="tab"
+                                    data-bs-target="#premium-2" type="button" role="tab">Премиум</button>
+                            </li>
+                        </ul>
+                        <div class="divider"></div>
+                        <ul class="nav nav-tabs tab tab-links" role="tablist">
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link title active" id="whatInclude-tab" data-bs-toggle="tab"
+                                    data-bs-target="#whatInclude2" type="button" role="tab">Что входит</button>
+                            </li>
+                            <li class="tab-item" role="presentation">
+                                <button class="tab-link title" id="shipDescription-tab" data-bs-toggle="tab"
+                                    data-bs-target="#shipDescription2" type="button" role="tab">Описание</button>
+                            </li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="whatInclude2" role="tabpanel"
+                                aria-labelledby="whatInclude-tab">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="econom-2" role="tabpanel"
+                                        aria-labelledby="econom-tab">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="block">
+                                                    <p>Бортовой контроллер <span class="mutted">х1</span></p>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="block__title">ДГ</div>
+                                                    <p>Sekee FM20 <span class="mutted">х3</span></p>
+                                                    <p>Реле работы <span class="mutted">х3</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="block">
+                                                    <div class="block__title">Котел</div>
+                                                    <p>Sekee FM20 <span class="mutted">х1</span></p>
+                                                </div>
+                                                <div class="block">
+                                                    <div class="block__title">Танки запаса топлива</div>
+                                                    <p>Датчик уровня топлива <span class="mutted">х1</span></p>
+                                                    <p>Монитор <span class="mutted">х1</span></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="comfort-2" role="tabpanel"
+                                        aria-labelledby="comfort-tab">
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="premium-2" role="tabpanel"
+                                        aria-labelledby="premium-tab">
+                                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="shipDescription2" role="tabpanel"
+                                aria-labelledby="shipDescription-tab">
+                                <h2>Lorem, ipsum.</h2>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    At laboriosam eveniet mollitia animi totam nam laudantium
+                                    nobis ullam tempora dolor.
+                                </p>
+                                <br>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Nihil voluptatem iste vel doloribus quaerat nulla.
+                                    Ducimus et dolorum a nulla! Ut impedit error magnam quis,
+                                    recusandae tempora quae earum vitae beatae et eligendi
+                                    consectetur incidunt culpa ullam quaerat praesentium dolorum.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="divider last"></div>
+                        <form action="#" class="form">
+                            <input type="hidden" name="title" value="Буксира-толкача Тип ОТ-2400">
+                            <input type="hidden" name="type" value="Эконом">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <input type="tel" name="phone" placeholder="Телефон" required>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <button class="form__btn-primary">Оставить заявку</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="order-first order-lg-last col-lg-6 col-xl-7 col-xxl-8">
+                        <img src="images/src/solutions/ship-2.png" alt="Промыслового судна Проект 1440"
+                            class="solutions__img">
+                    </div>
+                </div>
+            </section>
+        </article>
+    </div>
 </section>
 
 
@@ -1044,14 +1003,16 @@
 	<div class="container">
 		<div class="proposal__content">
 			<div class="proposal__left">
-				<span class="proposal__title title">Установите систему сейчас <br> оплатите потом</span>
+				<span class="proposal__title title">Установите систему <br> сейчас, оплатите потом</span>
 				<span class="proposal__subtitle">Оставляя заявку вы <br>
 					соглашаетесь на<span class="proposal__subtitle-orange"> обработку данных</span></span>
 			</div>
 			<div class="proposal__right">
 				<form class="proposal__form form">
-					<input class="form__name" name="name" type="text" placeholder="Имя"> 
-					<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
+					<div class="form__block">
+						<input class="form__name" name="name" type="text" placeholder="Имя"> 
+						<input class="form__phone" name="phone" type="text" placeholder="Телефон"> 
+					</div>
 					<input type="submit" value="Оставить заявку" class="form__btn-primary">
 				</form>
 				<div class="proposal__row">
@@ -1191,7 +1152,7 @@
 
 
 
-
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="js/app.min.js"></script>
 
 </body>
